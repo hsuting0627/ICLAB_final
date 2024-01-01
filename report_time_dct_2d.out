@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : dct_2d
+Version: R-2020.09-SP5
+Date   : Tue Jan  2 01:41:08 2024
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_1P08V_125C   Library: slow_vdd1v2
+Wire Load Model Mode: enclosed
+
+  Startpoint: Z4/Gx6_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Z4/Ax2mAx3_reg_23_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  dct_2d             Large                 slow_vdd1v2
+  dct_1d_mydesign_3  Small                 slow_vdd1v2
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  Z4/Gx6_reg_1_/CK (DFFTRX2)             0.0000 #   0.0000 r
+  Z4/Gx6_reg_1_/Q (DFFTRX2)              0.1303     0.1303 f
+  Z4/U65/Y (NAND2BXL)                    0.0695     0.1998 f
+  Z4/U418/CO (ADDFXL)                    0.1297     0.3295 f
+  Z4/U376/CO (ADDFXL)                    0.1202     0.4497 f
+  Z4/U367/CO (ADDFXL)                    0.1202     0.5698 f
+  Z4/U287/CO (ADDFXL)                    0.1202     0.6900 f
+  Z4/U286/CO (ADDFXL)                    0.1202     0.8101 f
+  Z4/U195/CO (ADDFXL)                    0.1202     0.9303 f
+  Z4/U144/CO (ADDFXL)                    0.1202     1.0504 f
+  Z4/U124/CO (ADDFXL)                    0.1202     1.1706 f
+  Z4/U125/CO (ADDFXL)                    0.1202     1.2908 f
+  Z4/U102/CO (ADDFXL)                    0.1202     1.4109 f
+  Z4/U103/CO (ADDFXL)                    0.1202     1.5311 f
+  Z4/U219/CO (ADDFXL)                    0.1202     1.6512 f
+  Z4/U403/CO (ADDFXL)                    0.1202     1.7714 f
+  Z4/U402/CO (ADDFXL)                    0.1202     1.8915 f
+  Z4/U384/CO (ADDFXL)                    0.1202     2.0117 f
+  Z4/U355/CO (ADDFXL)                    0.1202     2.1319 f
+  Z4/U342/CO (ADDFXL)                    0.1202     2.2520 f
+  Z4/U333/CO (ADDFXL)                    0.1202     2.3722 f
+  Z4/U323/CO (ADDFXL)                    0.1202     2.4923 f
+  Z4/U196/CO (ADDFXL)                    0.1202     2.6125 f
+  Z4/U285/CO (ADDFXL)                    0.1202     2.7326 f
+  Z4/U237/CO (ADDFXL)                    0.1175     2.8501 f
+  Z4/U909/Y (XOR2XL)                     0.0799     2.9300 r
+  Z4/Ax2mAx3_reg_23_/RN (DFFTRXL)        0.0110     2.9410 r
+  data arrival time                                 2.9410
+
+  clock clk (rise edge)                  3.0000     3.0000
+  clock network delay (ideal)            0.0000     3.0000
+  Z4/Ax2mAx3_reg_23_/CK (DFFTRXL)        0.0000     3.0000 r
+  library setup time                    -0.0945     2.9055
+  data required time                                2.9055
+  -----------------------------------------------------------
+  data required time                                2.9055
+  data arrival time                                -2.9410
+  -----------------------------------------------------------
+  slack (VIOLATED)                                 -0.0355
+
+
+1
